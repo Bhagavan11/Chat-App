@@ -19,7 +19,7 @@ app.use(cookieParser());
 app.use(
   cors({
     origin: [
-      "https://chat-app-snowy-eta.vercel.app",
+      "https://chat-app-bhagavan.vercel.app",
     ],
     credentials: true,
   })
