@@ -8,11 +8,10 @@ export const generateToken = (userId, res) => {
   console.log(token);
 
   res.cookie("jwt", token, {
-    maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
     httpOnly: true,
-    sameSite: "None", // ✅ must be None for cross-origin
-    secure: process.env.NODE_ENV !== "development", // ✅
+    maxAge: 1000 * 60 * 60 * 24 * 15,
+    sameSite: "None",     // 👈 Required for cross-site cookies
+    secure: true          // 👈 Required for HTTPS (like Render & Vercel)
   });
-
   return token;
 };
