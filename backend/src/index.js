@@ -19,12 +19,12 @@ app.use(cookieParser());
 app.use(
   cors({
     origin: [
-      "https://chat-app-snowy-eta.vercel.app", // ✅ Your Vercel frontend
-      "http://localhost:5173",                 // ✅ Local dev
+      "https://chat-app-snowy-eta.vercel.app",
     ],
     credentials: true,
   })
 );
+
 
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
