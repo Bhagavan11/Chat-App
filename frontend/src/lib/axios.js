@@ -1,6 +1,7 @@
 import axios from 'axios'
-
+import 'dotenv/config';
 export const axiosInstance = axios.create({
-  baseURL: "https://chat-app-1-1e2e.onrender.com/api",
+  baseURL: import.meta.env.VITE_BACKEND_URL,
   withCredentials: true,
-})
+});
+
